@@ -17,6 +17,14 @@ body{
     clear: both;
     font-style: italic;
 }
+.menu {
+    display: flex;
+}
+.menu a {
+    text-decoration: none;
+    text-align: center;
+    flex:1;
+}
 a:hover {
     font-style: italic;
     color: red;
