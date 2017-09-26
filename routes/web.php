@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Данная запись должна быть всегда в конце
+Route::get('{id}', 'BaseController@getIndex');
