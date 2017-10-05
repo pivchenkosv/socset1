@@ -2,5 +2,5 @@
 git status
 git add * 
 git status
-git commit -m "test1"
+git commit -m "%date%, %TIME%"
 git push
