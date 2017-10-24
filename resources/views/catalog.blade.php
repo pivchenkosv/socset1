@@ -1,6 +1,6 @@
 
 @extends('layouts.base')
 @section('content')
-    <h2>{{$obj -> name}}</h2>
-    <div class="maintext"> {!!$obj -> body!!}</div>
+    <h2>{{$catalog -> name}}</h2>
+    <div class="maintext"> {!!$catalog -> body!!}</div>
 @endsection

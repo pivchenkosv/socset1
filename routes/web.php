@@ -15,3 +15,5 @@ Route::get('/', 'BaseController@getIndex');
 
 //Данная запись должна быть всегда в конце
 Route::get('{id}', 'BaseController@getStatic');
+
+Route::get('catalog/{id}', 'ServicesController@getCatalog');
