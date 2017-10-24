@@ -10,7 +10,8 @@
             <div class="menu">
          <a href = "{{asset('about')}}"> About us </a>  
          <a href = "services"> Services </a>  
-         <a href = "contacts"> Contacts </a>  
+         <a href = "contacts"> Contacts </a> 
+         <a href = "images"> Images </a>
     </div>
         <div class= "content">
          @yield('content')

@@ -13,6 +13,7 @@ class BaseController extends Controller
     } 
     public function getStatic($id = 'welcome'){
         $obj = Maintext::where('url', $id)->first();
+        //dd($obj);
         return view('static', compact('obj'));
     }
 }
