@@ -17,6 +17,7 @@
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
                         <th>name</th>
+<th>body</th>
 
                         <th>&nbsp;</th>
                     </tr>
@@ -29,6 +30,7 @@
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
                             <td>{{ $row->name }}</td>
+<td>{{ $row->body }}</td>
 
                             <td>
                                 {!! link_to_route(config('quickadmin.route').'.catalog.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}
