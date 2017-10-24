@@ -9,9 +9,9 @@
         <div class = "header"> Header </div>
             <div class="menu">
          <a href = "{{asset('about')}}"> About us </a>  
-         <a href = "services"> Services </a>  
-         <a href = "contacts"> Contacts </a> 
-         <a href = "images"> Images </a>
+         <a href = "{{asset('catalogs')}}"> Services </a>  
+         <a href = "{{asset('contacts')}}"> Contacts </a> 
+         <a href = "{{asset('images')}}"> Images </a>
     </div>
         <div class= "content">
          @yield('content')
