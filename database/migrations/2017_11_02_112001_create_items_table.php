@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Eloquent\Model;
 
-class CreateCatalogTable extends Migration {
+class CreateItemsTable extends Migration {
 
     /**
      * Run the migrations.
@@ -14,10 +14,10 @@ class CreateCatalogTable extends Migration {
     public function up()
     {
         Model::unguard();
-        Schema::create('catalog',function(Blueprint $table){
+        Schema::create('items',function(Blueprint $table){
             $table->increments("id");
             $table->string("name");
-            $table->string("body")->nullable();
+            $table->text("body")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,7 +30,7 @@ class CreateCatalogTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('catalog');
+        Schema::drop('items');
     }
 
 }

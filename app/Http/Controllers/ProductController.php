@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use App\Products;
 class ProductsController extends Controller
 {
-    public function getCatalog($id = 0)
+    public function getOne($id = 0)
     {
-        $products = Product::where('catalog_id',$id) -> get();
+        $products = Product::find($id);
         return view('products', compact('products'));
     }
     public function getAll()
