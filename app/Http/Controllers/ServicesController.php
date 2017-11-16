@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Catalog;
-
+use App\Product;
 class ServicesController extends Controller
 {
     public function getCatalog($id = 0)

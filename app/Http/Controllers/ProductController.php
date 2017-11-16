@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Products;
+use App\Product;
+use App\Catalog;
 class ProductsController extends Controller
 {
     public function getOne($id = 0)
     {
-        $products = Product::find($id);
-        return view('products', compact('products'));
+        $product = Product::find($id);
+        return view('product', compact('product'));
     }
     public function getAll()
     {
