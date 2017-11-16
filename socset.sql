@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 05 2017 г., 22:16
+-- Время создания: Ноя 16 2017 г., 14:41
 -- Версия сервера: 5.7.16
 -- Версия PHP: 7.0.14
 
@@ -40,7 +40,7 @@ CREATE TABLE `catalog` (
 --
 
 INSERT INTO `catalog` (`id`, `name`, `body`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'first', 'qwe', '2017-11-02 08:24:09', '2017-11-02 08:24:09', NULL),
+(1, 'Trees', 'Деревья на любой вкус', '2017-11-02 08:24:09', '2017-11-02 08:24:09', NULL),
 (2, 'second', 'asd', '2017-11-02 08:24:14', '2017-11-02 08:24:14', NULL),
 (3, 'third', 'zxc', '2017-11-02 08:24:20', '2017-11-02 08:24:20', NULL),
 (4, 'fourth', 'vbn', '2017-11-02 08:24:32', '2017-11-02 08:24:32', NULL),
@@ -189,7 +189,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `body`, `picture`, `catalog_id`, `price`, `vip`, `status`, `currency`, `small_description`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'ff', '<p>qwe</p>', NULL, 1, '100', 'sale', 'на складе', '1.00', 'продукт', '2017-11-02 08:28:21', '2017-11-02 08:28:21', NULL);
+(1, 'Tree01', '<p>The very first tree</p>', '1510831569-tree.jpg', 1, NULL, 'sale', 'на складе', '100.00', 'топовое дерево', '2017-11-02 08:28:21', '2017-11-16 08:26:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -271,7 +271,13 @@ INSERT INTO `users_logs` (`id`, `user_id`, `action`, `action_model`, `action_id`
 (12, 1, 'created', 'catalog', 4, '2017-11-02 08:24:32', '2017-11-02 08:24:32'),
 (13, 1, 'created', 'catalog', 5, '2017-11-02 08:24:38', '2017-11-02 08:24:38'),
 (14, 1, 'created', 'catalog', 6, '2017-11-02 08:24:46', '2017-11-02 08:24:46'),
-(15, 1, 'created', 'product', 1, '2017-11-02 08:28:21', '2017-11-02 08:28:21');
+(15, 1, 'created', 'product', 1, '2017-11-02 08:28:21', '2017-11-02 08:28:21'),
+(16, 1, 'updated', 'product', 1, '2017-11-16 07:54:18', '2017-11-16 07:54:18'),
+(17, 1, 'updated', 'product', 1, '2017-11-16 07:56:36', '2017-11-16 07:56:36'),
+(18, 1, 'updated', 'product', 1, '2017-11-16 08:05:57', '2017-11-16 08:05:57'),
+(19, 1, 'updated', 'product', 1, '2017-11-16 08:06:22', '2017-11-16 08:06:22'),
+(20, 1, 'updated', 'product', 1, '2017-11-16 08:14:39', '2017-11-16 08:14:39'),
+(21, 1, 'updated', 'product', 1, '2017-11-16 08:26:09', '2017-11-16 08:26:09');
 
 --
 -- Индексы сохранённых таблиц
@@ -384,7 +390,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users_logs`
 --
 ALTER TABLE `users_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
