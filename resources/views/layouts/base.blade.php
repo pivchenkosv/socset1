@@ -11,7 +11,7 @@
          <a href = "{{asset('about')}}"> About us </a>  
          <a href = "{{asset('catalogs')}}"> Services </a>  
          <a href = "{{asset('contacts')}}"> Contacts </a> 
-         <a href = "{{asset('images')}}"> Images </a>
+         <!--<a href = "{{asset('images')}}"> Images </a>-->
     </div>
         <div class= "content">
          @yield('content')
