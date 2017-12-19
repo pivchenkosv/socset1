@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 16 2017 г., 14:41
+-- Время создания: Дек 19 2017 г., 12:54
 -- Версия сервера: 5.7.16
 -- Версия PHP: 7.0.14
 
@@ -40,12 +40,12 @@ CREATE TABLE `catalog` (
 --
 
 INSERT INTO `catalog` (`id`, `name`, `body`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Trees', 'Деревья на любой вкус', '2017-11-02 08:24:09', '2017-11-02 08:24:09', NULL),
-(2, 'second', 'asd', '2017-11-02 08:24:14', '2017-11-02 08:24:14', NULL),
-(3, 'third', 'zxc', '2017-11-02 08:24:20', '2017-11-02 08:24:20', NULL),
-(4, 'fourth', 'vbn', '2017-11-02 08:24:32', '2017-11-02 08:24:32', NULL),
-(5, 'fifth', 'fgh', '2017-11-02 08:24:38', '2017-11-02 08:24:38', NULL),
-(6, 'sixth', 'rty', '2017-11-02 08:24:46', '2017-11-02 08:24:46', NULL);
+(1, 'Audi', '<img src = \"uploads/Audi.jpg\">', '2017-11-02 08:24:09', '2017-12-17 13:12:21', NULL),
+(2, 'BMW', '<img src = \"uploads/BMW.jpg\">', '2017-11-02 08:24:14', '2017-12-18 18:26:18', NULL),
+(3, 'Jaguar', '<img src = \"uploads/Jaguar.jpg\">', '2017-11-02 08:24:20', '2017-11-02 08:24:20', NULL),
+(4, 'Mercedes-Benz', '<img src = \"uploads/mercedes-benz.jpg\">', '2017-11-02 08:24:32', '2017-12-18 18:38:21', NULL),
+(5, 'Bentley', '<img src = \"uploads/bentley.png\">', '2017-11-02 08:24:38', '2017-11-02 08:24:38', NULL),
+(6, 'Lamborghini', '<img src = \"uploads/lamborghini.png\">', '2017-11-02 08:24:46', '2017-11-02 08:24:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -68,10 +68,10 @@ CREATE TABLE `maintexts` (
 --
 
 INSERT INTO `maintexts` (`id`, `name`, `body`, `url`, `showhide`, `created_at`, `updated_at`) VALUES
-(1, 'About company', 'text', 'about', 'show', NULL, NULL),
-(2, 'Contacts', '+375291111111 - Yan<br>\r\n+375228333333 - Stas', 'contacts', 'show', NULL, NULL),
-(3, 'Services', 'You can order something here', 'services', 'show', NULL, NULL),
-(4, 'Images', '<img src = \"https://cdn.pixabay.com/photo/2014/12/22/00/07/tree-576847_960_720.png\" alt=\"tree\">', 'images', 'show', NULL, NULL);
+(1, 'About us', 'Данный сайт представляет собой интернет-магазин  для продажи автомобилей.', 'about', 'show', NULL, NULL),
+(2, 'Contacts', '+375291111111 - Ян<br>\n+375228333333 - Стас', 'contacts', 'show', NULL, NULL),
+(3, 'Services', 'You can order something here', 'catalogs', 'show', NULL, NULL),
+(4, 'Images', '', 'images', 'show', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -189,7 +189,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `body`, `picture`, `catalog_id`, `price`, `vip`, `status`, `currency`, `small_description`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Tree01', '<p>The very first tree</p>', '1510831569-tree.jpg', 1, NULL, 'sale', 'на складе', '100.00', 'топовое дерево', '2017-11-02 08:28:21', '2017-11-16 08:26:09', NULL);
+(1, 'Audi A8', '<p>Превосходство технологий&nbsp;&mdash; это&nbsp;то, что мы&nbsp;обещаем всем поклонникам нашего бренда. И&nbsp;никогда прежде это обещание не&nbsp;было реализовано так разносторонне и&nbsp;так полно, как в&nbsp;новом Audi A8. Он&nbsp;знаменует собой рождение нового языка дизайна, новой концепции управления, нового уровня качества. Новый Audi A8&nbsp;представляет будущее автомобилей премиум-класса.</p>', '1513527659-Audi-A8.jpeg', 1, NULL, 'sale', 'на складе', '70000.00', 'Audi-A8', '2017-11-02 08:28:21', '2017-12-17 13:20:59', NULL),
+(2, 'BMW M4', '<p>Мощный атлет для дорог и гоночных трасс, для совершенного дрифта, скоростных поворотов и длинных прямых, соединяющих между собой виражи. Для заездов с выбросом огромного количества адреналина, когда в руках находится рулевое колесо с отличным хватом, а пальцы лежат на отзывчивых подрулевых лепестках и любой момент готовы переключать передачи. Усаживаясь в спортивное сиденье M, водитель становится неотъемлемой частью автомобиля. Спорткар, созданный для получения ярких впечатлений от спортивного воождения &ndash; BMW M4.</p>', '1513636077-BMW-M4.jpg', 2, NULL, 'sale', 'Есть в продаже', '80000.00', 'BMW-M4', '2017-12-18 19:27:14', '2017-12-18 19:29:49', NULL),
+(3, 'Audi R8', '<p>Audi R8 V10 plus обеспечивает потрясающую мощность, которая дополнительно подчеркивается более отточенным дизайном. Нет никаких сомнений в том, что в Audi R8 Coup&eacute; присутствуют спортивные гены.</p>', '1513637961-Audi-r8.jpg', 1, NULL, 'sale', 'Есть в продаже', '120000.00', 'Audi-R8', '2017-12-18 19:59:22', '2017-12-18 19:59:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -210,7 +212,9 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `title`, `created_at`, `updated_at`) VALUES
 (1, 'Administrator', '2017-10-24 06:23:25', '2017-10-24 06:23:25'),
-(2, 'User', '2017-10-24 06:23:25', '2017-10-24 06:23:25');
+(2, 'User', '2017-10-24 06:23:25', '2017-10-24 06:23:25'),
+(3, 'Administrator', '2017-11-21 07:37:03', '2017-11-21 07:37:03'),
+(4, 'User', '2017-11-21 07:37:03', '2017-11-21 07:37:03');
 
 -- --------------------------------------------------------
 
@@ -234,7 +238,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Yan', 'Yan@gmail.com', '$2y$10$YrHpAkJt/NmbsXFAQGTghOJbez5DaXAI0IsE2UHUdHJNJPxoZfGMq', 'LxP3c1QI1ZewNrL9QxsDZf0BF8FAZzh58ESqW9XD4T6IDmmOnPDN3U0h0t85', '2017-10-24 06:23:45', '2017-10-24 06:23:45');
+(1, 1, 'Yan', 'Yan@gmail.com', '$2y$10$YrHpAkJt/NmbsXFAQGTghOJbez5DaXAI0IsE2UHUdHJNJPxoZfGMq', 'LxP3c1QI1ZewNrL9QxsDZf0BF8FAZzh58ESqW9XD4T6IDmmOnPDN3U0h0t85', '2017-10-24 06:23:45', '2017-10-24 06:23:45'),
+(2, 1, 'stas', 'stas@gmail.com', '$2y$10$DhEYDJwNRfuU0BqWovPnJO9c.MzLrs2UuymkOxvJqMQf7wo7S.3x.', NULL, '2017-11-21 07:37:27', '2017-11-21 07:37:27'),
+(3, NULL, 'Kirill', 'kirill@gmail.com', '$2y$10$MwN98j4nCDQGGxikRZVN.u7fqf3u10SbzGMxjV8eyn1sHeRtOdxii', 'jkXCmcfTyU2eXTO4UHs6Yh1Y3Sn7IKm3y1ObvUk8faWbb7gxZpAlfNPUh0Ij', '2017-12-19 06:03:28', '2017-12-19 06:03:28');
 
 -- --------------------------------------------------------
 
@@ -277,7 +283,21 @@ INSERT INTO `users_logs` (`id`, `user_id`, `action`, `action_model`, `action_id`
 (18, 1, 'updated', 'product', 1, '2017-11-16 08:05:57', '2017-11-16 08:05:57'),
 (19, 1, 'updated', 'product', 1, '2017-11-16 08:06:22', '2017-11-16 08:06:22'),
 (20, 1, 'updated', 'product', 1, '2017-11-16 08:14:39', '2017-11-16 08:14:39'),
-(21, 1, 'updated', 'product', 1, '2017-11-16 08:26:09', '2017-11-16 08:26:09');
+(21, 1, 'updated', 'product', 1, '2017-11-16 08:26:09', '2017-11-16 08:26:09'),
+(22, 2, 'updated', 'catalog', 1, '2017-12-17 13:12:21', '2017-12-17 13:12:21'),
+(23, 2, 'updated', 'product', 1, '2017-12-17 13:17:19', '2017-12-17 13:17:19'),
+(24, 2, 'updated', 'product', 1, '2017-12-17 13:18:17', '2017-12-17 13:18:17'),
+(25, 2, 'updated', 'product', 1, '2017-12-17 13:18:51', '2017-12-17 13:18:51'),
+(26, 2, 'updated', 'product', 1, '2017-12-17 13:20:59', '2017-12-17 13:20:59'),
+(27, 2, 'updated', 'catalog', 2, '2017-12-18 18:26:18', '2017-12-18 18:26:18'),
+(28, 2, 'updated', 'catalog', 4, '2017-12-18 18:38:21', '2017-12-18 18:38:21'),
+(29, 2, 'created', 'product', 2, '2017-12-18 19:27:14', '2017-12-18 19:27:14'),
+(30, 2, 'updated', 'product', 2, '2017-12-18 19:27:58', '2017-12-18 19:27:58'),
+(31, 2, 'updated', 'product', 2, '2017-12-18 19:29:49', '2017-12-18 19:29:49'),
+(32, 2, 'created', 'product', 3, '2017-12-18 19:59:22', '2017-12-18 19:59:22'),
+(33, 2, 'updated', 'product', 3, '2017-12-18 19:59:53', '2017-12-18 19:59:53'),
+(34, 3, 'updated', 'users', 3, '2017-12-19 06:14:49', '2017-12-19 06:14:49'),
+(35, 3, 'updated', 'users', 3, '2017-12-19 06:21:41', '2017-12-19 06:21:41');
 
 --
 -- Индексы сохранённых таблиц
@@ -375,22 +395,22 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `users_logs`
 --
 ALTER TABLE `users_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
