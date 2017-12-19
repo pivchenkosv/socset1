@@ -19,6 +19,8 @@
 
 @foreach($products as $one)
 <div class="maintext" id="line_block"><a href = "{{asset('product/'.$one -> id)}}">{{$one -> name}}</a><br>
-    <a href = "{{asset('product/'.$one -> id)}}"><img src = "{{asset('uploads/thumb/'.$one -> picture)}}"></a><br></div>
+    <a href = "{{asset('product/'.$one -> id)}}"><img src = "{{asset('uploads/thumb/'.$one -> picture)}}"></a><br>
+    <a href="#" id="good-{{$one->id}}-{{$one->currency}}" class="addCart" >Add to cart</a>
+</div>
 @endforeach
 @endsection

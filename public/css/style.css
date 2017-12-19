@@ -30,4 +30,7 @@ a:hover {
     font-style: italic;
     color: red;
 }
+#line_block:hover {
+    box-shadow: 1px 1px 1px black;
+}
 
