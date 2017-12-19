@@ -1,8 +1,8 @@
 @extends('layouts.base')
 @section('content')
     <h2>{{$product -> name}}</h2>
-    <div class="maintext"> {!!$product -> body!!}
-    <img src = "{{asset('uploads/'.$product -> picture)}}"><br>
+    <div class="maintext" align = "center"> {!!$product -> body!!}
+    <img src = "{{asset('uploads/'.$product -> picture)}}" ><br>
     VIP: {{$product -> vip}} <br>    
     Status: {{$product -> status}} <br>
     Price: {{$product -> currency}} $<br>
