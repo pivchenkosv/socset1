@@ -6,14 +6,32 @@
         <title>Avto</title>
     </head>
     <body>
-        @if(Auth::user())
-        <a href="{{asset('/home')}}">{{Auth::user()->name}}</a>
-        <a href="{{asset('/logout')}}">Выход</a>
-        
-        @else
-        <a href="{{asset('/login')}}">login</a>
-        <a href="{{asset('/register')}}">register</a>
-        @endif
+        <ul>
+        @guest
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li>
+                                <a href="{{asset('home')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                             </li>
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+ 
+
+                        @endguest
+        </ul>
         
         <div id="basket">
 <table>
