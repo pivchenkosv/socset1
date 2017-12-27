@@ -17,17 +17,18 @@
     </head>
     <body>
         <div class="header">
+            <div class="header1">
             <table width="100%">
             <tr>
                 <th align="left" width="60%">
-                    Avto
+                    <font face="algerian" color="RoyalBlue" style="font-size:40px"><i><b>Avto</b></i></font>
                 </th>
                 <th align="right">
                     <table>
                         <div id="basket";>
                             <tbody>
                                 <tr style="display: none;" class="hPb">
-                                    <td>Выбрано:&nbsp&nbsp</td>
+                                    <td>Выбрано:&nbsp;&nbsp;</td>
                                     <td><span id="totalGoods">0</span> товаров</td>
                                 </tr>
                                 <tr style="display: none;" class="hPb">
@@ -81,8 +82,9 @@
  
           </tr>
             </table>
+            </div>
         </div>
-        
+        <br>
             <div class="menu">
          <a href = "{{asset('about')}}"> About us </a>  
          <a href = "{{asset('catalogs')}}"> Services </a>  
