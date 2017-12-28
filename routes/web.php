@@ -18,7 +18,7 @@ Route::get('product/{id}','ProductsController@getOne');
 //Данная запись должна быть всегда в конце
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('cart');
 
 Route::get('{id}', 'BaseController@getStatic');
 
