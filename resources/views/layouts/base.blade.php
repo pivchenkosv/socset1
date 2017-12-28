@@ -16,8 +16,8 @@
         <title>Avto</title>
     </head>
     <body>
-        <div class="header">
-            <div class="header1">
+       
+            <div class="header">
             <table width="100%">
             <tr>
                 <th align="left" width="60%">
@@ -83,8 +83,7 @@
           </tr>
             </table>
             </div>
-        </div>
-        <br>
+        <br><br><br><br><br><br>
             <div class="menu">
          <a href = "{{asset('about')}}"> About us </a>  
          <a href = "{{asset('catalogs')}}"> Services </a>  
